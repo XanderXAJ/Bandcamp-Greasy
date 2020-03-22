@@ -46,11 +46,11 @@
                     console.log(e)
                 }
 
-                var titleLabel = document.getElementsByClassName('download-title')[0]
-                if (titleLabel.children[0].href !== undefined && titleLabel.children[0].href.length > 0) {
-                    window.open(titleLabel.children[0].href)
+                const downloadNode = document.querySelector(".download-title > .item-button")
+                if (downloadNode !== null) {
+                    window.open(downloadNode.href, "_blank")
                     clearTimeout(interval)
-                    if(closeAfterDownload) {
+                    if (closeAfterDownload) {
                         close()
                     }
                 }
