@@ -31,8 +31,9 @@
                   }
                 }
             } else {
-                var errorText = document.getElementsByClassName("error-text")[0]
-                if (errorText.offsetParent !== null) {
+                const errorTextNodes = [...document.querySelectorAll(".error-text")]
+                const anyErrorTextDisplayed = errorTextNodes.some(el => el.offsetParent !== null)
+                if (anyErrorTextDisplayed) {
                     location.reload()
                 }
 
