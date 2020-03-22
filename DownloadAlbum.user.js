@@ -10,16 +10,16 @@
 
 (function () {
     'use strict'
-    
+
     // Set preferred download format here
     var format = "MP3 320"
     // Whether the download tab should automatically be closed after the download has been started
     var closeAfterDownload = true
-    
+
     var selectedFormat = false
     setTimeout(() => {
         var interval = setInterval(() => {
-            if(!selectedFormat){
+            if (!selectedFormat) {
                 document.getElementsByClassName('item-format button')[0].click()
                 var spans = document.getElementsByTagName("span")
 
